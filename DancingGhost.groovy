@@ -45,4 +45,6 @@ CSG text2 = text.rot(-90, 0, 0)
 		.movez(13)
 BasePlate = BasePlate.union(text2)
 Cover = Cover.union(text)
-return [BasePlate,Cover,]
+CoverM = Cover.toZMin()
+		.movex(length+1)
+return [BasePlate,CoverM]
